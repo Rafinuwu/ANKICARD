@@ -1,12 +1,17 @@
-function toggleEnvelope() {
-    var envelope = document.getElementById('envelope');
-    var content = document.getElementById('content');
-    
-    if (content.style.display === 'none') {
-        content.style.display = 'block';
-        envelope.style.display = 'none';
-    } else {
+const envelope = document.getElementById('envelope');
+const content = document.getElementById('content');
+const image = document.getElementById('image');
+
+let isOpen = false;
+
+envelope.addEventListener('click', () => {
+    if (isOpen) {
         content.style.display = 'none';
-        envelope.style.display = 'block';
+        isOpen = false;
+    } else {
+        // Change the image source to the path of your image file
+        image.src = 'p';
+        content.style.display = 'block';
+        isOpen = true;
     }
-}
+});
