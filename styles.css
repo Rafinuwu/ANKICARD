@@ -28,5 +28,5 @@
 #image {
     width: 150%;
     height: 150%;
-    object-fit: center;
+    object-fit: cover;
 }
